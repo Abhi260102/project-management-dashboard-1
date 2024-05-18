@@ -6,11 +6,11 @@ import { NavElement, UserElement } from "./Store";
 import { useParams } from "next/navigation";
 const Sidebar = () => {
   const useNavElement = NavElement((state) => state.value);
-  const useNavChange = NavElement((state) => state.navChange);
+  const navChange = NavElement((state) => state.navChange);
   const userDetails = UserElement((state) => state.User);
   const setUserDetails = UserElement((state) => state.setUserData);
   const handleChange = (val) => {
-    useNavChange(val);
+    navChange(val);
   };
   console.log(useNavElement);
   return (
