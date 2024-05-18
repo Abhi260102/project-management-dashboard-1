@@ -1,3 +1,4 @@
+"use client";
 import { Avatar, Popover } from "antd";
 import React, { useEffect } from "react";
 import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
