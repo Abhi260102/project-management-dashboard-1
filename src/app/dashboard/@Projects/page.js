@@ -341,9 +341,12 @@ const Project = () => {
                     <p className="py-2">
                       <span className="font-bold text-sm mr-2">Tasks: </span>
                       <div className="flex gap-2 flex-wrap">
-                        {e.tasks.map((t) => (
+                        {e.tasks.map((t, index) => (
                           <>
-                            <span className=" p-1 bg-orange-200 rounded-lg mx-1 text-orange-500  text-nowrap">
+                            <span
+                              key={index}
+                              className=" p-1 bg-orange-200 rounded-lg mx-1 text-orange-500  text-nowrap"
+                            >
                               {t.name}
                             </span>
                           </>
@@ -377,8 +380,9 @@ const Project = () => {
                       </span>
                       <div className="flex w-full justify-between items-center">
                         <Avatar.Group>
-                          {e.assignees.map((member) => (
+                          {e.assignees.map((member, index) => (
                             <abbr
+                              key={index}
                               title={`${member}`}
                               className="cursor-pointer"
                             >

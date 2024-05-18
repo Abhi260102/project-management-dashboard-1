@@ -161,6 +161,7 @@ const CardItem = ({
                 <DropIndicator beforeID={e.id} column={column} />
 
                 <div
+                  key={index}
                   onDragStart={(event) => handleDragStart(event, e)}
                   draggable="true"
                   className="relative rounded-lg p-[12px] w-[100%] bg-white active:cursor-grabbing border-2 border-slate-200 cursor-pointer"
@@ -196,8 +197,12 @@ const CardItem = ({
                   <p className="text-sm p-1">{truncateString(e.description)}</p>
                   <p className="flex w-full justify-between mt-2">
                     <Avatar.Group>
-                      {e.assignees.map((member) => (
-                        <abbr title={`${member}`} className="cursor-pointer">
+                      {e.assignees.map((member, index) => (
+                        <abbr
+                          title={`${member}`}
+                          key={index}
+                          className="cursor-pointer"
+                        >
                           <Avatar
                             size={27}
                             style={{
