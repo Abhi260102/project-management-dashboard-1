@@ -9,7 +9,9 @@ const Sidebar = () => {
   const useNavChange = NavElement((state) => state.navChange);
   const userDetails = UserElement((state) => state.User);
   const setUserDetails = UserElement((state) => state.setUserData);
-
+  const handleChange = (val) => {
+    useNavChange(val);
+  };
   console.log(useNavElement);
   return (
     <>
@@ -38,7 +40,7 @@ const Sidebar = () => {
                 ? "  bg-[rgba(0,0,0,0.1)]  text-black font-bold"
                 : "text-neutral-600")
             }
-            onClick={() => useNavChange("project")}
+            onClick={() => handleChange("project")}
           >
             Projects
           </div>
@@ -49,7 +51,7 @@ const Sidebar = () => {
                 ? "  bg-[rgba(0,0,0,0.2)] text-black font-bold"
                 : "text-neutral-600")
             }
-            onClick={() => useNavChange("task")}
+            onClick={() => handleChange("task")}
           >
             Task Manager
           </div>
@@ -104,9 +106,7 @@ const Sidebar = () => {
               ? "  bg-[rgba(0,0,0,0.1)]  text-black font-bold"
               : "text-neutral-600")
           }
-          onClick={() => {
-            useNavChange("project");
-          }}
+          onClick={() => handleChange("project")}
         >
           Projects
         </div>
@@ -117,9 +117,7 @@ const Sidebar = () => {
               ? "  bg-[rgba(0,0,0,0.2)] text-black font-bold"
               : "text-neutral-600")
           }
-          onClick={() => {
-            useNavChange("task");
-          }}
+          onClick={() => handleChange("task")}
         >
           Task Manager
         </div>
