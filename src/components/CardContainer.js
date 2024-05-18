@@ -155,10 +155,10 @@ const CardItem = ({
         }`}
       >
         {filterCards.length > 0 &&
-          filterCards.map((e) => {
+          filterCards.map((e, index) => {
             return (
               <>
-                <DropIndicator beforeID={e.id} column={column} />
+                <DropIndicator key={index} beforeID={e.id} column={column} />
 
                 <div
                   key={index}
