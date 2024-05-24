@@ -2,6 +2,8 @@
 
 Welcome to the Project Management Dashboard! This application is built with Next.js and provides a comprehensive solution for managing projects, tasks, and team members. The dashboard features robust functionality including user authentication, project and task management, and drag-and-drop task organization. 
 
+ **Live Link**: https://project-management-dashboard-one.vercel.app
+
 ## Features
 
 - **User Authentication**: Secure login page with complete form validation.
