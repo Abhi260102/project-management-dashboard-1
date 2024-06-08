@@ -29,7 +29,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className=" w-screen h-screen p-2 flex items-center justify-center bg-[url('https://picsum.photos/1000/1000')] bg-center bg-cover ">
+    <div className=" w-screen h-screen p-2 flex items-center justify-center bg-[url('https://picsum.photos/1600/800')] bg-center bg-cover ">
       <Form
         name="normal_login"
         className="bg-[rgba(255,255,255,0.7)] sm:w-[40%] w-full  h-[60%]  rounded-xl flex justify-center items-center flex-col backdrop-blur-sm "
